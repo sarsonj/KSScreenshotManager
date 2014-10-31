@@ -1,0 +1,21 @@
+{
+    "app_name": "Dog Monitor.app",
+    "build_config": "Debug",
+    "destination_path": "/Users/sarsonj/Dropbox/tappytaps - marketing/Apps/Dog Monitor/screenshotsios7-source",
+    "devices": [
+        "com.apple.CoreSimulator.SimDeviceType.iPhone-4s",
+        "com.apple.CoreSimulator.SimDeviceType.iPhone-5",
+        "com.apple.CoreSimulator.SimDeviceType.iPad-Retina"
+    ],
+    "languages": [
+        "en", 
+        "de",
+        "cs",
+        "es",
+        "nl",
+        "fr"
+        ],
+    "project_path": "/Users/sarsonj/Documents/work/ios/babymonitor3g/Baby Monitor 3G/",
+    "scheme_name": "Dog Monitor",
+    "workspace": "Baby Monitor 3G.xcworkspace"
+}
