@@ -13,7 +13,7 @@ import shutil
 def compile_iossim():
     previous_dir = os.getcwd()
     os.chdir(os.path.join(os.path.realpath(os.path.split(__file__)[0]), 'Contributed', 'ios-sim'))
-    subprocess.call(['xcodebuild', '-scheme', 'ios-sim', '-configuration', 'Release', '-derivedDataPath', 'build', 'clean', 'build', 'SYMROOT=build'], stdout=open('/dev/null', 'w'))
+    subprocess.call(['xcodebuild', '-scheme', 'ios-sim', '-configuration', 'Release', '-derivedDataPath', 'build', 'clean', 'build', 'SYMROOT=build'])
     os.chdir(previous_dir)
 
 def compile_app():
@@ -22,9 +22,9 @@ def compile_app():
     
     # Force the simulator build to use 32-bit, otherwise UIGetScreenImage doesn't exist
     if 'scheme_name' in options:
-        subprocess.call(['xcodebuild', '-scheme', options['scheme_name'], '-configuration', options['build_config'], '-sdk', 'iphonesimulator', '-derivedDataPath', 'build', 'clean', 'build', 'ARCHS=i386', 'ONLY_ACTIVE_ARCH=NO'], stdout=open('/dev/null', 'w'))
+        subprocess.call(['xcodebuild','-workspace', options['workspace'],  '-scheme', options['scheme_name'], '-configuration', options['build_config'], '-sdk', 'iphonesimulator', '-derivedDataPath', 'build', 'clean', 'build', 'ARCHS=i386', 'ONLY_ACTIVE_ARCH=NO'])
     else:
-        subprocess.call(['xcodebuild', '-target', options['target_name'], '-configuration', options['build_config'], '-sdk', 'iphonesimulator', 'clean', 'build', 'SYMROOT=build', 'ARCHS=i386', 'ONLY_ACTIVE_ARCH=NO'], stdout=open('/dev/null', 'w'))
+        subprocess.call(['xcodebuild', '-target', options['target_name'], '-configuration', options['build_config'], '-sdk', 'iphonesimulator', 'clean', 'build', 'SYMROOT=build', 'ARCHS=i386', 'ONLY_ACTIVE_ARCH=NO'])
 
     os.chdir(previous_dir)
 
