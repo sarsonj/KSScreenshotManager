@@ -1,0 +1,18 @@
+{
+    "app_name": "GeotagPhotos.app",
+    "build_config": "Release",
+    "destination_path": "/Users/sarsonj/Dropbox/TappyTaps - Marketing/Apps/Geotag Photos/# iOS/Screenshots/iOS7/source",
+    "devices": [
+        "com.apple.CoreSimulator.SimDeviceType.iPhone-4s",
+        "com.apple.CoreSimulator.SimDeviceType.iPhone-5"
+    ],
+    "languages": [
+        "en",
+        "de",
+        "fr",
+        "es"
+        ],
+    "project_path": "/Users/sarsonj/Documents/work/ios/geotagphotos/",
+    "scheme_name": "Geotag Photos",
+    "workspace": "GeotagPhotos.xcworkspace"
+}
